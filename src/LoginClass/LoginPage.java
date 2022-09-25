@@ -11,6 +11,8 @@ public class LoginPage implements ActionListener {
     JFrame frame = new JFrame();
     JButton loginButton =new JButton("Login");
     JButton resetButton = new JButton("Reset");
+
+    JButton createAccountButton = new JButton("Register Now");
     JTextField userIDField = new JTextField();
     JPasswordField userPasswordField = new JPasswordField();
     JLabel userIDLabel = new JLabel("userID:");
@@ -39,6 +41,10 @@ public class LoginPage implements ActionListener {
         resetButton.setFocusable(false);
         resetButton.addActionListener(this);
 
+        createAccountButton.setBounds(300,250,200,25);
+        createAccountButton.setFocusable(false);
+        createAccountButton.addActionListener(this);
+
 
         frame.add(userIDLabel);
         frame.add(userPasswordLabel);
@@ -47,6 +53,7 @@ public class LoginPage implements ActionListener {
         frame.add(userPasswordField);
         frame.add(loginButton);
         frame.add(resetButton);
+        frame.add(createAccountButton);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420,420);
@@ -73,6 +80,7 @@ public class LoginPage implements ActionListener {
                     messageLabel.setText("Login successful");
                     frame.dispose();
                     WelcomePage welcomePage = new WelcomePage(userID);
+                    Question question = new Question("");
                 }
                 else {
                     messageLabel.setForeground(Color.red);

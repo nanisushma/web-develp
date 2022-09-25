@@ -3,7 +3,7 @@ package LoginClass;
 import javax.swing.*;
 import java.awt.*;
 
-public class WelcomePage {
+public class WelcomePage  {
 
     JFrame frame = new JFrame();
     JLabel welcomeLabel = new JLabel("Hello");
